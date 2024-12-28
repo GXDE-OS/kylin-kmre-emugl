@@ -8,7 +8,7 @@ Homepage: http://www.kylinos.cn
 
 Package: libkylin-kmre-emugl
 Section: libs
-Architecture: arm64 amd64
+Architecture: any
 Conflicts: kydroid2, kydroid2-app-data, kydroid2-daemon, kydroid2-filewatcher, kydroid2-fuse, kydroid2-image-data, libkydroid-emugl-normal
 Depends: ${shlibs:Depends}, ${misc:Depends}, libegl1-mesa (>=18.0), libgl1-mesa-glx (>=18.0), libgles2-mesa (>=18.0)
 Description: emugl libraries for kylin-kmre.
