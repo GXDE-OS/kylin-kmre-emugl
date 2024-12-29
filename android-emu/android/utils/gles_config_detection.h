@@ -20,6 +20,7 @@
 #ifndef GLES_CONFIG_DETECTION
 #define GLES_CONFIG_DETECTION
 #include "gles_version_types.h"
+#include <cstdint>
 
 class GLESConfigDetection {
 
