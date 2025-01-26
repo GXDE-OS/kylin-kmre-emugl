@@ -938,7 +938,8 @@ void ColorBuffer::waitSync(bool debug) {
 
 static float getScreenDPI()
 {
-    float scale = 1.0;
+    float scale = 1.25;
+    // Kylin 的 schemas
     FILE* fp = popen("gsettings get org.ukui.SettingsDaemon.plugins.xsettings scaling-factor", "r");
     char buffer[32] = {0};
     if (fp) {
@@ -946,6 +947,21 @@ static float getScreenDPI()
             try {
                 scale = std::stof(buffer);
 		scale = (scale <= 0) ? 1.0 : scale;
+            }
+            catch (...) {
+                // do nothing
+            }
+        }
+        pclose(fp);
+    }
+    // DDE/GXDE 的 schemas
+    fp = popen("gsettings get com.deepin.xsettings scale-factor", "r");
+    memset(buffer, 0, sizeof(buffer));
+    if (fp) {
+        if (fgets(buffer, 31, fp) != NULL) {
+            try {
+                scale = std::stof(buffer);
+                scale = (scale <= 0) ? 1.0 : scale;
             }
             catch (...) {
                 // do nothing
