@@ -1,9 +1,8 @@
-kylin-kmre-emugl (3.0.0.1) UNRELEASED; urgency=medium
+kylin-kmre-emugl (3.0.0.2) UNRELEASED; urgency=medium
 
-  * Non-maintainer upload.
-  * 修复不会跟随系统缩放的问题
+  * 调整依赖
 
- -- gfdgd_xi <3025613752@qq.com>  Sun, 26 Jan 2025 09:16:02 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Wed, 12 Feb 2025 14:01:41 +0800
 
 kylin-kmre-emugl (3.0.0.0-0k0.4) v101; urgency=medium
 
